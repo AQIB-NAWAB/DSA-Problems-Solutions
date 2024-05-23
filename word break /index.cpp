@@ -15,6 +15,7 @@ bool wordBreakMemo(string s, unordered_set<string>& wordDict, unordered_map<stri
     }
     return memo[s] = false;
 }
+
 int main(){
 
     string targetString;
