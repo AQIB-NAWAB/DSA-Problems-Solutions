@@ -7,7 +7,7 @@ using namespace std;
 bool wordBreakMemo(string s, unordered_set<string>& wordDict, unordered_map<string, bool>& memo) {
     if (s.empty()) return true;
     if (memo.count(s)) return memo[s];
-
+    
     for (int i = 1; i <= s.size(); ++i) {
         if (wordDict.count(s.substr(0, i)) && wordBreakMemo(s.substr(i), wordDict, memo)) {
             return memo[s] = true;
